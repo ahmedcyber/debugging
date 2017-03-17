@@ -114,10 +114,10 @@ footer{
 
 /*form*/
 .holder{
-    margin: auto;
+    margin: 20px auto;
     width: 40%;
     background-color: #fff;
-    padding: 15px;
+    padding: 25px;
 }
 .holder form{
     text-transform: capitalize;
