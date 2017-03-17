@@ -1,0 +1,197 @@
+/*css reset*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-size: 1em;
+    color: #483F6A;
+    background-color: #80529D; /*debugging*/
+}
+.container{
+    background-color:#FFE0FD; /*debugging*/
+    padding: 5px;
+    width: 90%;
+    margin:0 5%;
+}
+h1,h2{
+    padding: 15px 0;
+    text-transform: capitalize;
+}
+p{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: #2c1b36;
+}
+a:hover, a:active{
+    text-decoration: underline;
+    font-style: italic;
+}
+.logo{
+    text-transform: capitalize;
+    font-style: oblique;
+    letter-spacing: 2px;
+    color: rgba(16, 14, 26, 0.82);
+}
+.clear{
+    clear: both;
+}
+/*header*/
+header{
+    width: 35%;
+    display: inline-block;
+}
+header .logo{
+    margin: 0 50px;
+}
+/*header end*/
+
+/*nav */
+nav{
+    background-color: #E2A780;
+    float: right;
+    display: inline-block;
+    width: 60%;
+    padding: 20px;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+    padding: 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    border: 1px solid #ddd;
+    display: block;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background-color: #c1a8a8;
+    padding: 8px;
+}
+/*nav end*/
+
+/*content*/
+.content{
+    padding: 5px;
+}
+.content img{
+    float: left;
+    margin:10px;
+    max-width: 200px;
+}
+/*content end*/
+
+/*footer*/
+footer{
+    background-color: #E2A780;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
+/*footer end*/
+
+
+/*let's make it responsive on different screen sizes */
+/*large screen devices only*/
+@media (max-width:1200px){
+    
+}
+
+/*medium screen devices only*/
+@media (min-width:992px) and (max-width:1199px){
+    
+}
+/*small screen devices only*/
+@media (min-width:768px) and (max-width:991px){
+    
+}
+
+/*form*/
+.holder{
+    margin: auto;
+    width: 40%;
+    background-color: #fff;
+    padding: 15px;
+}
+.holder form{
+    text-transform: capitalize;
+}
+.holder form input{
+    padding: 4px;
+    text-transform: capitalize;
+    outline: 0;
+    margin: 3px;
+    color: #483F6A;
+}
+.holder form input[type="text"]{
+    background-color: #abb25b;
+    background-clip: padding-box;
+}
+input::-webkit-input-placeholder{ /*change placeholder color by using this selector*/
+    color: #ddd; 
+}
+#submit{
+    text-align: center;
+    margin-top: 7px;
+}
+input[type="submit"] {
+    background: #a492af;
+    padding: 8px !important;
+    cursor:pointer;
+}
+/*form end*/
+
+/*extra small devices only*/
+@media (max-width:767px){
+    h1,h2{
+        padding: 5px 0;
+    }
+    header{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    header h1{
+        font-size: 5vw;
+    }
+    nav{
+        float: none;
+        display: inline-block;
+        width: 100%;
+        padding: 7px;
+   }
+    nav ul li a{
+        padding: 5px;
+        font-size: 0.8em;
+   }
+    .content h2{
+        font-size: 1em;
+    }
+    .content img{
+        float: none;
+        margin:5px auto;
+        max-width: 200px;
+        display: block;
+    }
+    .content p{
+        margin: 5px;
+        padding: 4px;
+    }
+    footer{
+        padding: 7px;
+        font-size: 0.8em;
+    }
+    .holder{
+        width: 80%;
+        font-size: 0.8em;
+    }
+    input::-webkit-input-placeholder{
+        font-size: 0.8em;
+    }
+}
