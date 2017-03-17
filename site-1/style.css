@@ -118,6 +118,8 @@ footer{
     width: 40%;
     background-color: #fff;
     padding: 25px;
+    border-radius: 10px;
+    border: 2px dotted purple;
 }
 .holder form{
     text-transform: capitalize;
