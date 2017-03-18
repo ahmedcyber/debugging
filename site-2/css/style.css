@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/*global content formatting and styling*/
+    
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+/*general styling*/
+body{
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #483e3e;
+    background-color: #103035;
+}
+.container{
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+}
+h2,h3{
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 1.4em;
+}
+h3{
+    font-size: 1.2em;
+}
+h1{
+    font-size:1.8em;
+    margin: 8px 0 15px 0;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+p{
+    line-height: 150%;
+    margin: 0.5em 0;
+}
+details{
+    line-height: 150%;
+}
+a{
+    color: red;
+    font-style: italic;
+    transition: all 0.7s;
+}
+a:hover{
+    color: blue;
+}
+/*top image section starts*/
+.top-image .top-image-showcase{
+    width: 100%;
+    list-style: none;
+}
+.top-image .top-image-showcase li{
+    width: 100%;
+}
+.top-image .top-image-showcase li .top-image-photo{
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: hidden;
+}
+.top-image-photo img{
+    width: 100%;
+    opacity: 0.7;
+    display: block;
+    transform: scale(1.15);
+    transition: all 0.7s;
+    cursor: pointer;
+}
+.top-image-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/*top image section ends*/
+
+/*article starts*/
+article{
+    padding: 20px 15px;
+}
+/*article ends*/
+
+/*promo starts*/
+.promo-section{
+    padding: 0 5px 10px 10px;
+    overflow: hidden;
+}
+.promo{
+    background-repeat: no-repeat;
+    float: left;
+    width: 33%;
+    background-position: 0px 15px;
+    padding: 5px 15px 0px 65px;
+}
+.promo.one{
+    background-image: url(../images/web-d.png);
+}
+.promo.two{
+    background-image: url(../images/gp.jpg);
+}
+.promo.three{
+    background-image: url(../images/photo-editing.jpg);
+}
+.promo-section .promo .promo-content{
+    padding: 0 5px 0px 5px;
+}
+.promo-section .promo h2{
+    margin: 0;
+    font-size: 0.9em;
+}
+.promo-section .promo p{
+    margin: 0.4em 0;
+    line-height: 130%;
+    font-size: 0.8em;
+}
+
+a.read-more{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.7em;
+    background: url(../images/cta_arrow.png) no-repeat right 0px;
+    padding-right: 13px;
+    transition: none;
+}
+a.read-more:hover{/*to add the same text color for the arrow background when hovering  on the link*/
+    background-position: right -50px;
+}
+
+/*promo ends*/
+
+/*nav start*/
+nav a{
+    color: green;
+    text-transform: capitalize;
+    display: inline-block;
+    text-decoration: none;
+    margin: 12px 10px 12px 10px;
+    font-size: 1.1em;
+    padding: 3px;
+}
+nav a:hover{
+    color: #fff;
+}
+form{
+    float: right;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+form input#box{
+    padding: 7px 15px;
+    outline: 0;
+    border: 1px solid #495f65;
+    border-right: 0;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    font-size: 14px;
+}
+form input::-webkit-input-placeholder {
+    color:skyblue;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+form input:-moz-placeholder/*firefox*/ {
+    color:skyblue;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+form input[type='submit']{
+    color: #fff;
+    padding: 5px 17px;
+    background: #2a698e;
+    text-transform: capitalize;
+    outline: 0;
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+}
+
+/*nav ends*/
+
+/*footer starts*/
+footer{
+    background-color: #125388;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    padding: 10px 0 10px 0;
+    word-spacing: 2px;
+    text-align: center;
+}
+/*footer ends*/
