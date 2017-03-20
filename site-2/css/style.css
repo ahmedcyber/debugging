@@ -1,6 +1,4 @@
-@charset "UTF-8";
-/*global content formatting and styling*/
-    
+
 /*css reset*/
 *{
     margin: 0;
@@ -16,7 +14,7 @@ body{
     background-color: #103035;
 }
 .container{
-    width: 70%;
+    max-width: 980px;
     margin: auto;
     background-color: #fff;
     position: relative;
@@ -51,6 +49,25 @@ a{
 a:hover{
     color: blue;
 }
+.clear-fix{
+    clear: both;
+}
+
+/*header starts*/
+header{
+    height: 150px;
+    background: url(../images/large-banner.jpg) no-repeat right 0px;
+}
+header a.logo{
+    display: block;
+    position: absolute;
+    top: 52px;
+    right: 36px;
+    background: url(../images/large-logo.png) no-repeat;
+    width: 100px;
+    height: 100px;
+}
+/*header ends*/
 /*top image section starts*/
 .top-image .top-image-showcase{
     width: 100%;
@@ -92,10 +109,8 @@ article{
 }
 .promo{
     background-repeat: no-repeat;
-    float: left;
-    width: 33%;
-    background-position: 0px 15px;
-    padding: 5px 15px 0px 65px;
+    background-position: 13px 15px;
+    padding: 5px 15px 0px 75px;
 }
 .promo.one{
     background-image: url(../images/web-d.png);
@@ -131,10 +146,131 @@ a.read-more{
 a.read-more:hover{/*to add the same text color for the arrow background when hovering  on the link*/
     background-position: right -50px;
 }
-
 /*promo ends*/
 
+/*portfolio starts*/
+.portfolio{
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.portfolio .row{
+    text-align: center;
+}
+.portfolio figure{
+    background: #000;
+    margin-left:5px;
+    overflow: hidden;
+}
+.portfolio figure img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scale(1.15);
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.portfolio figure img:hover{
+    transform: scale(1);
+    opacity: 1;
+}
+/*portfolio ends*/
+
+/*reg form starts*/
+.reg-form h2{
+    text-align: center;
+    text-transform: capitalize;
+    color:#000;
+    letter-spacing: 2px;
+}
+.myform{
+    margin: 35px auto;
+    width: 60%;
+    font-size: 0.9em;
+}
+.myform div{
+    margin: 5px 0;
+}
+.myform label{
+    text-transform: capitalize;
+    color: orange;
+    margin-bottom: 5px;
+}
+.myform input[type="text"], .myform input[type="email"], .myform select, textarea{
+    padding: 7px 10px;
+    outline: 0;
+    border: 1px solid orange;
+    border-radius: 5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -ms-border-radius:5px;
+    width: 100%;
+    background: #ddd;
+}
+.myform input::-webkit-input-placeholder, .myform textarea::-webkit-input-placeholder {
+    color: #605b5b;
+    text-transform:capitalize;
+    letter-spacing:1px;
+    font-size:0.8em;
+}
+.myform select option{
+    background: #fff;
+    text-transform: capitalize;
+}
+.myform input[type="checkbox"]{
+    margin-right:5px;
+    outline: 0;
+}
+.myform textarea{
+    height: 100px;
+    resize: none;
+}
+.myform div.button{
+    text-align: center;
+}
+.myform input[type="submit"]{
+    color:orange;
+    background-color: #2d2d2d;
+    width: 100px;
+    height: 35px;
+    text-transform: capitalize;
+    margin: 15px 0;
+    outline: 0;
+}
+.myform select option{
+    background: #fff;
+    text-transform: capitalize;
+}
+.myform input[type="checkbox"]{
+    margin-right:5px;
+    outline: 0;
+}
+.myform textarea{
+    height: 100px;
+    resize: none;
+}
+.myform div.button{
+    text-align: center;
+}
+.myform input[type="submit"]{
+    color:orange;
+    background-color: #2d2d2d;
+    width: 100px;
+    height: 35px;
+    text-transform: capitalize;
+    margin: 15px 0;
+    outline: 0;
+}
+
+/*reg form ends*/
+
 /*nav start*/
+nav{
+    position: absolute;
+    width: 100%;
+    background-color: #efa725;
+    top: 150px;
+}
 nav a{
     color: green;
     text-transform: capitalize;
@@ -142,18 +278,18 @@ nav a{
     text-decoration: none;
     margin: 12px 10px 12px 10px;
     font-size: 1.1em;
-    padding: 3px;
+    padding: 5px;
 }
 nav a:hover{
     color: #fff;
 }
-form{
+.search-box{
     float: right;
     margin-top: 11px;
     margin-right: 10px;
 }
-form input#box{
-    padding: 7px 15px;
+.search-box input#box{
+    padding: 7px 20px;
     outline: 0;
     border: 1px solid #495f65;
     border-right: 0;
@@ -161,17 +297,17 @@ form input#box{
     border-bottom-left-radius: 5px 5px;
     font-size: 14px;
 }
-form input::-webkit-input-placeholder {
+.search-box input::-webkit-input-placeholder {
     color:skyblue;
     text-transform: capitalize;
     letter-spacing: 2px;
 }
-form input:-moz-placeholder/*firefox*/ {
+.search-box input:-moz-placeholder/*firefox*/ {
     color:skyblue;
     text-transform: capitalize;
     letter-spacing: 2px;
 }
-form input[type='submit']{
+.search-box input[type='submit']{
     color: #fff;
     padding: 5px 17px;
     background: #2a698e;
@@ -182,7 +318,6 @@ form input[type='submit']{
     font-family: fantasy;
     letter-spacing: 1px;
 }
-
 /*nav ends*/
 
 /*footer starts*/

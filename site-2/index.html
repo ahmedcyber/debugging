@@ -9,9 +9,7 @@
         <title>responsive website</title>
         <!-- style -->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/large.css">
-        <link rel="stylesheet" media="only screen and (min-width:50px) and (max-width:500px)" href="css/small.css">
-        <link rel="stylesheet" media="only screen and (min-width:501px) and (max-width:800px)" href="css/medium.css">
+        <link rel="stylesheet" href="css/responsive.css">
         <!--HTML 5 shiv and respond.js -->
         <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -19,48 +17,48 @@
         <![end if]-->
     </head>
     <body>
-      
+      <div class="row">
        <div class="container"><!--container starts-->
          
           <header><!--header starts-->
               <a href="#" class="logo"></a>
           </header><!--header ends-->
           
-          <section class="top-image"><!--top image starts-->
+          <div class="top-image"><!--top image starts-->
               <ul class="top-image-showcase">
                   <li>
                       <figure class="top-image-photo">
-                          <img  src="images/main-image.png" width="980px" height="319px" alt="main image">
+                          <img  src="images/main-image.png" width="980" height="319" alt="main image">
                       </figure>
                   </li>
               </ul>
-          </section><!--top image ends-->
+          </div><!--top image ends-->
           
           <article><!--article starts-->
              <h1>welcome everybody</h1>
-              <p>Video provides a powerful way to help you prove your point. When you click <strong>Online Video</strong>, you can paste in the <em>embed code</em> for the video you want to add. <a href="#">You can also type a keyword</a> to search online for the video that best fits your document.
+              <p>Video provides a powerful way to help you prove your point. When you click <strong>Online Video</strong>, you can paste in the <em>embed code</em> for the video you want to add. <a href="#">You can also type a keyword</a> to search online for the video that best fits your document.</p>
               <details>
-                  To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
+                 <summary>full details</summary>
+                  <p>To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.</p>
               </details>
-              </p>
           </article><!--article ends-->
           
           <section class="promo-section"><!--promo starts-->
-              <div class="promo one">
+              <div class="promo one col-lg-4 col-md-4 col-sm-4">
                   <div class="promo-content">
                       <h2>Web Developmet Services</h2>
                       <p>To make your document look professionally produced, Word provides header, footer, cover page</p>
                       <p><a class="read-more" href="#">read more</a></p>
                   </div>
               </div>
-              <div class="promo two">
+              <div class="promo two col-lg-4 col-md-4 col-sm-4">
                   <div class="promo-content">
                       <h2>Graphic Designing Services</h2>
                       <p>To make your document look professionally produced, Word provides header, footer, cover page</p>
                       <p><a class="read-more" href="#">read more</a></p>
                   </div>
               </div>
-              <div class="promo three">
+              <div class="promo three col-lg-4 col-md-4 col-sm-4">
                   <div class="promo-content">
                       <h2>Photo Editing Services</h2>
                       <p>To make your document look professionally produced, Word provides header, footer, cover page</p>
@@ -68,34 +66,63 @@
                   </div>
               </div>      
           </section><!--promo ends-->
-          <section class="portfolio"><!--portfolio starts-->
-             <div class="wrapper">
-                 <div class="image-holder">
+          <div class="portfolio"><!--portfolio starts-->
+             <div class="row">
+                <div class="img-holder col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <figure>
-                       <img src="images/section-web.png" alt="design image sample">
+                        <img src="images/section-web.png" alt="design sample">
                     </figure>
                 </div>
-               <div class="image-holder">
+                 <div class="img-holder col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <figure>
-                        <img src="images/section-graphic.png" alt="design image sample">
+                        <img src="images/section-graphic.png" alt="design sample">
                     </figure>
                 </div>
-               <div class="image-holder">
+                 <div class="img-holder col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <figure>
-                        <img src="images/section-photo.png" alt="design image sample">
+                        <img src="images/section-photo.png" alt="design sample">
                     </figure>
                 </div>
-             </div>   
-                
-          </section><!--portfolio ends-->
+            </div>
+          </div><!--portfolio ends-->
+          
+          <section class="reg-form"><!--reg-form starts-->
+               <h2>we are happy to listen from you</h2>
+              <form class="myform" action="#" method="get">
+                    <div>
+                        <label>first name</label>
+                    </div>
+                    <input type="text" name="first-name" placeholder="enter your name" maxlength="20">
+                    <div>
+                        <label>email</label>
+                    </div>
+                    <input type="email" name="email" placeholder="enter your email">
+                    <div>
+                        <label>how did you find us</label>
+                    </div>
+                    <select>
+                        <option value="friends">friends</option>
+                        <option value="social-media" selected>social media</option>
+                        <option value="advertisment">advertisment</option>
+                        <option value="others">others</option>
+                    </select>
+                    <div>
+                        <label>newsletter</label>
+                    </div>
+                    <input type="checkbox" checked name="newsletter" value="yes, please">yes,please
+                    <textarea name="message" placeholder="your message goes here"></textarea>
+                    <div class="button">
+                      <input type="submit" value="send it">
+                    </div>
+              </form>
+          </section><!--reg-form ends-->
           
            <nav><!--nav starts-->
              <a href="#">home</a>
              <a href="#">services</a>
              <a href="#">about</a>
              <a href="#">contact us</a> 
-             
-            <form action="#" method="get"><!--search box starts-->
+            <form action="#" method="get" class="search-box"><!--search box starts-->
                <input  autofocus type="text" name="search" id="box" placeholder="enter a word" maxlength="40">
                <input type="submit" value="search" id="submit">
             </form><!--search box ends-->     
@@ -107,6 +134,6 @@
           
            
        </div><!--container ends-->
-        
+    </div>    
     </body>
 </html>
