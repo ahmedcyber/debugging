@@ -27,6 +27,7 @@ body{
 header{
     background: url(../images/cyber.jpg) no-repeat bottom right, url(../images/egypt-header.jpg) no-repeat 42% 35%;
     background-size:100px 85px, cover ; 
+    background-attachment:scroll, fixed;
     min-height: 600px;
     position: relative;
 }
