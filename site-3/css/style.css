@@ -25,10 +25,6 @@ body{
 ************************************************************************************************************
 ************************************************************************************************************/
 header{
-    /*background: url(../images/egypt-header.jpg) no-repeat 42% 35%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;*/
     background: url(../images/cyber.jpg) no-repeat bottom right, url(../images/egypt-header.jpg) no-repeat 42% 35%;
     background-size:100px 85px, cover ; 
     min-height: 600px;
@@ -308,6 +304,113 @@ header .overlay .order p{
 
 
 
+/**********************************************************************************************************
+****************************************   what they say about us starts **********************************
+*****************************************                          ****************************************
+************************************************************************************************************/
+.they-say{
+    padding: 50px 0;
+}
+
+.they-say .h1{
+    margin: 0 0 30px;
+}
+.they-say .testimonial{
+    background: #eee;
+    border: 1px solid #b1adad;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.they-say .testimonial .character{
+    width: 120px;
+   margin-right: 20px;
+}
+.they-say .testimonial .character .image-thumb{
+    padding: 3px;
+    border:1px solid #ddd;
+    background-color: #fff;
+}
+
+.they-say .testimonial h3{
+    margin: 8px 0 15px;
+}
+.they-say .testimonial p{
+    margin: 0;
+    line-height: 1.8;
+    padding: 0 15px 0 0;
+    width: calc(100% - 140px);
+}
+@media (max-width:767px){
+    .they-say .testimonial .character{
+       margin: auto;
+       float: none;    
+    }
+    .they-say .testimonial h3{
+       margin: 8px 0 15px;
+       float: none;
+        text-align: center;
+   }
+    .they-say .testimonial p{
+        width:100%;
+        float: none;
+        padding: 0;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .they-say .testimonial:first-of-type{
+    width: 100%;
+   }
+   .they-say .testimonial:not(:first-of-type){
+    width: 49%;
+  }
+    .they-say .testimonial:last-of-type{
+        margin-left: 2%;
+    } 
+    .they-say .testimonial:not(:first-of-type) .character{
+       margin: auto;
+       float: none;    
+    }
+    .they-say .testimonial:not(:first-of-type) h3{
+       margin: 8px 0 15px;
+       float: none;
+        text-align: center;
+   }
+    .they-say .testimonial:not(:first-of-type) p{
+        width:100%;
+        float: none;
+        padding: 0;
+    }
+}
+
+@media (min-width:992px){
+    .they-say .testimonial:first-of-type{
+    width: 80%;
+    margin-left: 10%;
+   }
+   .they-say .testimonial:not(:first-of-type){
+    width: 49%;
+  }
+    .they-say .testimonial:last-of-type{
+        margin-left: 2%;
+    } 
+}
+
+    
+
+
+
+
+/**********************************************************************************************************
+****************************************   what they say about us ends **********************************
+*****************************************                          ****************************************
+************************************************************************************************************/
+
+
+
+
+
 
 
 
@@ -491,6 +594,9 @@ header .overlay .order p{
 .responsive-image{
     width: 100%;
     display: block;
+}
+.image-circle{
+    border-radius: 50%;
 }
 /****************************************************
 **************************************************
