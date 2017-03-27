@@ -25,10 +25,10 @@ body{
 ************************************************************************************************************
 ************************************************************************************************************/
 header{
-    background: url(../images/cyber.jpg) no-repeat bottom right, url(../images/egypt-header.jpg) no-repeat 42% 35%;
-    background-size:100px 85px, cover ; 
-    background-attachment:scroll, fixed;
-    min-height: 600px;
+    background:url(../images/egypt-header.jpg) no-repeat 42% 35%;
+    background-size: cover ; 
+    background-attachment: fixed;
+    min-height: 670px;
     position: relative;
 }
 header .overlay{
@@ -72,6 +72,61 @@ header .overlay .order p{
 }
 /**********************************************************************************************************
 ****************************************       header ends         ****************************************
+*****************************************                          *************************************
+************************************************************************************************************/
+
+/**********************************************************************************************************
+****************************************       nav starts         ****************************************
+*****************************************                          *************************************
+************************************************************************************************************/
+nav{
+    background:#273b40;
+    padding: 10px 0;
+}
+nav .brand{
+    padding: 7px 0 0;
+}
+nav .nav-list li{
+    display: inline-block;
+    padding: 10px;
+    line-height: 3;
+}
+nav .nav-list li a{
+    color: #fff;
+    transition: all 0.5s ease-in;
+}
+nav .nav-list li a:hover{
+    color: #d1b577;
+}
+@media (max-width:767px){
+    nav{
+        background: #555;
+    }
+    nav .brand{
+        float: none;
+        width: 80px;
+        margin: auto;
+        padding-top: 12px;
+    }
+    nav .nav-list{
+        float: none;
+        padding: 7px;
+    }
+    nav .nav-list li{
+    display: block;
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 7px;    
+    background-color:rgba(0,0,0,0.5);
+   }
+    nav .nav-list li:last-child{
+        margin-bottom: 0;
+    }
+
+}
+
+/**********************************************************************************************************
+****************************************       nav ends            ****************************************
 *****************************************                          *************************************
 ************************************************************************************************************/
 
@@ -311,6 +366,7 @@ header .overlay .order p{
 ************************************************************************************************************/
 .they-say{
     padding: 50px 0;
+    overflow: hidden;
 }
 
 .they-say .h1{
@@ -402,14 +458,131 @@ header .overlay .order p{
         margin-left: 2%;
     } 
 }
+/**********************************************************************************************************
+****************************************   what they say about us ends **********************************
+*****************************************                          ****************************************
+************************************************************************************************************/
 
-    
+
 
 
 
 
 /**********************************************************************************************************
-****************************************   what they say about us ends **********************************
+****************************************   information starts         **********************************
+*****************************************                           ****************************************
+************************************************************************************************************/
+.information{
+    background-color:#d6d6d6;
+    padding: 30px 0;
+}
+.information h2{
+    color: #555;
+}
+.information .info-list li{
+    display: inline-block;
+    background-color: rgba(131, 124, 124, 0.47);
+    padding: 12px;
+    cursor: pointer;
+}
+.information .info-list li.active{
+    background-color: #fff;
+    color:#500293;
+    font-weight: 700;
+    font-style: italic;
+}
+.information .info-content{
+    margin-bottom: 30px;
+}
+.information .info-content>div{
+    background: #fff;
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 2;
+    overflow: hidden;
+}
+.information .info-content>div img{
+    margin-right: 20px;
+}
+.information .info-content>div>p{
+    margin: 0;
+    width: calc(100% - 128px);
+}
+
+.information .info-content>div:not(:first-child){
+    display: none;
+}
+@media (max-width:767px){
+   .information .info-list li{
+    display: block;
+    margin-bottom: 7px;
+    border: 2px double #968282;
+   }
+    .information .info-list li:last-of-type{
+    margin-bottom: 0;
+   }
+.information .info-content>div img{
+    margin-right: 0;
+    float: none;
+    margin: auto;
+    display: block;
+  }
+.information .info-content>div>p{
+    width: 100%;
+    float: none;
+    font-size: 0.85em;
+    padding: 0 5px 0 0;
+    margin-top: 10px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .information .info-content>div img{
+    margin-right: 0;
+    float: none;
+    margin: auto;
+    display: block;
+  }
+.information .info-content>div>p{
+    width: 100%;
+    float: none;
+    font-size: 0.85em;
+    padding: 0 5px 0 0;
+    margin-top: 10px;
+    } 
+}
+
+
+/**********************************************************************************************************
+****************************************   information ends        **********************************
+*****************************************                          ****************************************
+************************************************************************************************************/
+
+
+
+
+
+/**********************************************************************************************************
+****************************************   footer starts        **********************************
+*****************************************                          ****************************************
+************************************************************************************************************/
+footer{
+    background: #333;
+    color: #fff;
+}
+footer .copyright, footer .design{
+    width: 50%;
+    padding: 20px;
+    font-size: 0.92em;
+}
+@media (max-width:767px){
+    footer .copyright, footer .design{
+    float: none;
+    width: 100%;
+   }
+}
+
+/**********************************************************************************************************
+****************************************        footer ends                *******************************
 *****************************************                          ****************************************
 ************************************************************************************************************/
 
@@ -603,6 +776,23 @@ header .overlay .order p{
 }
 .image-circle{
     border-radius: 50%;
+}
+.classic-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.image-thumbnails{
+    padding: 3px;
+    background-color: #ccc;
+    border: 1px solid grey;
+}
+.normal-paragraph{
+    margin: 0;
+}
+.classic-link{
+    color: #000;
+    text-decoration: none;
 }
 /****************************************************
 **************************************************
