@@ -14,7 +14,9 @@ html,body{
     font-weight: 300;
     margin: 0;
 }
-
+hr{
+    border: 2px dashed #93adb7;
+}
 
 
 
@@ -39,6 +41,11 @@ html,body{
 *****************************************************************************************************************/
 nav{
     background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
 }
 nav .nav-list>li{
     display: inline-block;
@@ -53,22 +60,24 @@ nav .nav-list li a:hover{
     background-color: #ddd;
     color: #000;
 }
-
 nav .nav-list .menu{
     position: relative;
 }
+nav .nav-list .menu:hover >a  /*to add a background color and color for menu element which contains submenu*/{
+    background-color: #ddd;
+    color: #000;
+}
 nav .nav-list .menu:after{
     content: " ";
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #000;
     width: 0;
     height: 0;
     position: absolute;
-    top: 20px;
-    left: 70px;
+    top: 22px;
+    left: 68px;
 }
-
 nav .nav-list .menu .submenu{
     position: absolute;
     width: 200px;
@@ -146,7 +155,7 @@ header .overlay{
     color: #fff;
 }
 header .overlay h1{
-    margin-top:140px;
+    margin-top:187px;
 }
 header .overlay p{
     padding: 10px;
@@ -178,11 +187,9 @@ header .overlay p{
 *****************************************************************************************************************
 *****************************************************************************************************************/
 .about-egypt{
-    padding: 70px 0;
+    padding: 45px 0;
 }
 .about-egypt p:nth-of-type(2){
-    padding: 0 20px 0 0;
-    font-size: 20px;
     width: 80%;
     margin-left: 10%;
 }
@@ -197,19 +204,40 @@ header .overlay p{
     width: 31.3333%;
 }
 .about-egypt .image-wrapper figure figcaption{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .about-egypt .image-wrapper figure:last-of-type{
     margin: 0;
 }
-
-
-
-
-
-
-
+@media (max-width:767px){
+    .about-egypt p:nth-of-type(2){
+        width: 100%;
+        margin-left: 0;
+        padding: 5px;
+        text-align: justify;
+    }
+    .about-egypt .image-wrapper{
+        padding: 30px 0;
+    }
+    .about-egypt .image-wrapper figure{
+        width:100%;
+        margin-bottom: 15px;
+        float: none;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+   
+    .about-egypt .image-wrapper figure:first-of-type{
+        width:80%;
+        margin-bottom: 35px;
+        margin-left: 10%;
+        float: none;
+    }
+    .about-egypt .image-wrapper figure:not(:first-of-type){
+        width:48%;
+    }
+}
 /***************************************************************************************************************
 ****************************************************************************************************************
 *****************************************************************************************************************
@@ -225,16 +253,352 @@ header .overlay p{
 /***************************************************************************************************************
 ****************************************************************************************************************
 *****************************************************************************************************************
+                                           tour starts
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************/
+.tour{
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+.tour p>i{
+    color: #999;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.tour .booking-wrapper{
+    background-color: #fff;
+    box-shadow: 1px 0px 16px darkgrey;
+    color: #999;
+    margin: 30px 0 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.tour .booking-wrapper li{
+    display: inline-block;
+    margin-right: 15px;
+    padding: 8px;
+}
+.tour .booking-wrapper span{
+    display: inline-block;
+    padding: 5px 10px;
+}
+.tour .booking-wrapper span.sold-out{
+    background: red;
+    color: white;
+    border: 2px groove #ccc;
+    font-weight: 400;
+}
+.tour .booking-wrapper span.no3{
+    margin-right: 25px;
+    padding: 7px 11px;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+}
+.tour .tour-info{
+    width: 33.33%;
+    margin-top: 30px;
+}
+.tour .tour-info .info{
+    padding: 0 8px;
+}
+.tour .tour-info .info.last{
+    margin-right: 0;
+}
+.tour .tour-info .tour-photo{
+    background: #000;
+} 
+.tour .tour-info .tour-photo img{
+    cursor: pointer;
+}
+.tour .tour-info .tour-photo img:hover{
+    opacity: 0.8;
+}
+.tour .tour-info .tour-content{
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    font-size: 0.9em;
+}
+.tour .tour-info .tour-content h3{
+    margin:0;
+}
+.tour .tour-info .tour-content p:first-of-type{
+    margin: 22px 0;
+}
+.tour .tour-info .tour-content p:last-of-type{
+    margin-bottom: 25px;
+}
+.tour .tour-info .tour-content .ticket a{
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    box-shadow: 1px 2px 4px #2f2f2f, 2px 4px 5px #fff;
+    display: inline-block;
+    transition: all 0.5s;
+}
+.tour .tour-info .ticket a:hover{
+    background-color: #ddd;
+    color: #000;
+}
+@media (max-width:600px){
+    .tour .tour-info{
+        float: none;
+        width: 100%;
+    }
+    .tour .tour-info .info{
+        margin-right: 0;
+    }
+}
+@media (min-width:601px) and (max-width:767px){
+    .tour .tour-info{
+        float: left;
+        width: 33.33%;
+    }
+    .tour .tour-info .tour-content p:first-of-type{
+        font-size: 12px;
+      }
+}
+/***************************************************************************************************************
+****************************************************************************************************************
+*****************************************************************************************************************
+                                           tour ends
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************/
+
+
+
+
+
+/***************************************************************************************************************
+****************************************************************************************************************
+*****************************************************************************************************************
+                                           contact starts
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************/
+.contact{
+    padding: 50px 0;
+}
+.contact h2{
+    margin-bottom: 18px;
+}
+.contact p>.subheading{
+    color: #999;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.contact address{
+    width: 50%;
+}
+.contact address>p{
+    margin: 15px 0;
+}
+.contact address>p i{
+    margin-right: 5px;
+}
+.contact .contact-form{
+    width: 50%;
+}
+.contact .contact-form .myform .input-holder{
+    width: 47%;
+    float: left;
+    margin-right: 3%;
+}
+.contact .contact-form .myform .input-holder:last-of-type{
+    margin-right:0;
+}
+.contact .contact-form .myform .input-holder input{
+    width: 100%;
+    padding: 10px 12px;
+    outline: 0;
+}
+.contact input, .contact textarea::-webkit-input-placeholder{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.contact textarea{
+    width: 97%;
+    margin-right: 3%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    resize: none;
+    outline: 0;
+}
+.contact input[type="submit"]{
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    float: right;
+    margin: 10px 16px 0 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: 0;
+    border: 0;
+}
+.contact input[type="submit"]:hover{
+    background-color: #ddd;
+    color:#000;
+    box-shadow: 1px 2px 7px #000;
+}
+@media (max-width:600px){
+    .contact address{
+        font-size: 11px;
+    }
+    .contact input, .contact textarea::-webkit-input-placeholder{
+        font-size: 0.7em;
+    }
+}
+@media (max-width:767px){
+    .contact address{
+        width: 100%;
+        float: none;
+    }
+    .contact .contact-form{
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+    }
+    .contact .contact-form .myform .input-holder{
+        width: 100%;
+        float: none;
+        margin:0 0 10px;
+    }
+    .contact .contact-form .myform .input-holder:last-of-type{
+        margin-bottom: 0;
+    }
+    .contact textarea{
+        width: 100%;
+        margin-right:0;
+    }
+    .contact input[type="submit"]{
+        margin-right: 0;
+    }
+}
+/***************************************************************************************************************
+****************************************************************************************************************
+*****************************************************************************************************************
+                                           contact ends
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************/
+
+
+
+
+
+/***************************************************************************************************************
+****************************************************************************************************************
+*****************************************************************************************************************
+                                           footer starts
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************/
+footer{
+    padding: 30px 0;
+    background-color: #ccc;
+}
+footer .social-links li{
+    display: inline-block;
+    padding: 2px;
+}
+footer .social-links li i{
+    width: 35px;
+    height:35px;
+    line-height: 2;
+    display: block;
+    background: #45504f;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0px 0px 3px #000, 0px -4px 3px #ddd;
+    transition: all 0.4s;
+}
+footer .social-links li .facebook:hover{
+    background-color: #3b5998;
+}
+
+footer .social-links li .twitter:hover{
+    background-color:#55acee;
+}
+
+footer .social-links li .youtube:hover{
+    background-color: #bb0000;
+}
+
+footer .social-links li .linkedin:hover{
+    background-color:#007bb5;
+}
+
+footer .social-links li .instagram:hover{
+    background-color: #125688;
+}
+
+footer .social-links li .facebook:hover{
+    background-color: #3b5998;
+}
+
+footer .social-links li .snapchat:hover{
+    background-color: #fffc00;
+}
+footer .copyright>p{
+    margin-top: 20px;
+}
+footer .copyright>p>.author{
+    display: inline-block;
+    color: chocolate;
+    text-shadow: 1px 2px 4px #000, 1px 2px 4px #000;
+    background: darkgrey;
+    padding: 5px 8px;
+    font-weight: 700;
+    font-style: italic;
+    box-shadow: 0px -4px 8px #888;
+    letter-spacing: 3px;
+    transition: all 0.5s linear;
+}
+footer .copyright .author:hover{
+    background: #656b71;
+    color: #fff;
+}
+@media (max-width:600px){
+    footer .copyright{
+        font-size: 0.76em;
+    }
+}
+
+
+
+/***************************************************************************************************************
+****************************************************************************************************************
+*****************************************************************************************************************
+                                           footer ends
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************/
+
+
+
+
+
+/***************************************************************************************************************
+****************************************************************************************************************
+*****************************************************************************************************************
                                          mini screen devices general rules start
 *****************************************************************************************************************
 *****************************************************************************************************************
 *****************************************************************************************************************/
-@media (max-width:550px){
+@media (max-width:600px){
     .visible-mini{
         display: block!important;
     }
     .hidden-mini{
         display: none!important;
+    }
+    .row{
+        padding: 10px 0;
     }
 }
 /***************************************************************************************************************
@@ -259,6 +623,12 @@ header .overlay p{
     }
     .hidden-xs{
         display: none!important;
+    }
+    .responsive-paragraph{
+       font-size: 17px;
+    }
+     .row{
+        padding: 10px 0;
     }
 }
 /***************************************************************************************************************
@@ -290,6 +660,9 @@ header .overlay p{
       .hidden-sm{
         display: none!important;
     }
+    .responsive-paragraph{
+       font-size: 19px;
+    }
 }
 /***************************************************************************************************************
 ****************************************************************************************************************
@@ -320,6 +693,9 @@ header .overlay p{
       .hidden-md{
         display: none!important;
     }
+    .responsive-paragraph{
+       font-size: 20px;
+    }
 }
 
 
@@ -344,7 +720,7 @@ header .overlay p{
 *****************************************************************************************************************/
 @media (min-width:1200px){
     .container{
-        width: 970px;
+        width: 1170px;
     }
     .visible-lg{
         display: block!important;
